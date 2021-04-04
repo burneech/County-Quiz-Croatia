@@ -3,10 +3,43 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:s="https://github.com/canton7/Stylet"
+        xmlns:vm="clr-namespace:CountyQuizCroatia.ViewModels"
         xmlns:local="clr-namespace:CountyQuizCroatia.Views"
         mc:Ignorable="d"
-        Title="ShellView" Height="300" Width="500">
-    <Grid>
-        <TextBlock>Hello world from ShellView</TextBlock>
+        Title="ShellView" Height="500" Width="1300" MinHeight="400" MinWidth="1000" Background="#1E1E1E">
+    
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <!--MAP-->
+        <local:MapView Grid.Column="0" Margin="0 0 10 0"/>
+        
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--INFO BUTTON-->
+            <Button Content="INFO MODE" Margin="0 0 2 4" Grid.Column="0" Style="{StaticResource ButtonStyle}"
+                    Command="{s:Action ChangeGameModeCommand}" CommandParameter="{x:Static vm:ShellViewModel+GameMode.Info}"/>
+
+            <!--QUIZ BUTTON-->
+            <Button Content="QUIZ MODE" Margin="2 0 0 4" Grid.Column="1" Style="{StaticResource ButtonStyle}"
+                    Command="{s:Action ChangeGameModeCommand}" CommandParameter="{x:Static vm:ShellViewModel+GameMode.Quiz}"/>
+
+            <!--INFO/QUIZ VIEW CONTENT CONTROL-->
+            <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="#3E3E42" BorderThickness="2" Padding="15">
+                <ContentControl s:View.Model="{Binding ActiveItem}"/>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
