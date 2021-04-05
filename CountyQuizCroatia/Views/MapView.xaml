@@ -4,10 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:s="https://github.com/canton7/Stylet"
-             xmlns:local="clr-namespace:CountyQuizCroatia.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="500">
-    
+             mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="500">
     <Viewbox Stretch="Uniform">
         <Canvas Width="613" Height="613">
             <!--Brodsko-posavska-->

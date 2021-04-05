@@ -4,9 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:s="https://github.com/canton7/Stylet"
-             xmlns:local="clr-namespace:CountyQuizCroatia.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -15,21 +13,20 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Foreground="White" FontSize="20">
+        <TextBlock Grid.Row="0" Foreground="{StaticResource MyWhite}" FontSize="25">
             <Run Text="Left to guess: "/>
             <Run Text="{Binding LeftToGuess}"/>
         </TextBlock>
 
-        <TextBlock Grid.Row="1" Foreground="White" FontSize="20">
+        <TextBlock Grid.Row="1" Foreground="{StaticResource MyWhite}" FontSize="25">
             <Run Text="Wrong guesses: "/>
             <Run Text="{Binding WrongGuesses}"/>
         </TextBlock>
 
-        <Viewbox Grid.Row="2" Stretch="Uniform" Margin="25">
-            <TextBlock  Text="{Binding CountyToGuess.Name}" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        <Viewbox Grid.Row="2" Margin="35">
+            <TextBlock Text="{Binding CountyToGuess.Name}" Foreground="{StaticResource MyWhite}"/>
         </Viewbox>
         
-        <Button Grid.Row="3" Content="Start new quiz" Command="{s:Action ResetQuizCommand}" Style="{StaticResource ButtonStyle}"/>
+        <Button Grid.Row="3" Content="START NEW QUIZ" Command="{s:Action ResetQuizCommand}" Style="{StaticResource ButtonStyle}"/>
     </Grid>
 </UserControl>

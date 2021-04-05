@@ -3,29 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:CountyQuizCroatia.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Label VerticalAlignment="Center" Foreground="White" FontSize="20" Content="Name:" Grid.Row="0"/>
-        <Label VerticalAlignment="Center" Foreground="White" FontSize="20" Content="Seat:" Grid.Row="1"/>
-        <Label VerticalAlignment="Center" Foreground="White" FontSize="20" Content="Area:" Grid.Row="2"/>
-        <Label VerticalAlignment="Center" Foreground="White" FontSize="20" Content="Population:" Grid.Row="3"/>
+        <Viewbox Grid.Row="0" HorizontalAlignment="Left">
+            <Label Foreground="{StaticResource MyGray}" Content="Name:"/>
+        </Viewbox>
+        <Viewbox Grid.Row="2" HorizontalAlignment="Left">
+            <Label Foreground="{StaticResource MyGray}" Content="Seat:"/>
+        </Viewbox>
+        <Viewbox Grid.Row="4" HorizontalAlignment="Left">
+            <Label Foreground="{StaticResource MyGray}" Content="Area:"/>
+        </Viewbox>
+        <Viewbox Grid.Row="6" HorizontalAlignment="Left">
+            <Label Foreground="{StaticResource MyGray}" Content="Population:"/>
+        </Viewbox>
 
-        <TextBlock Foreground="White" Padding="10 0" VerticalAlignment="Center" FontSize="35" Text="{Binding CurrentCounty.Name}" Grid.Column="1" Grid.Row="0"/>
-        <TextBlock Foreground="White" Padding="10 0" VerticalAlignment="Center" FontSize="35" Text="{Binding CurrentCounty.Seat}" Grid.Column="1" Grid.Row="1"/>
-        <TextBlock Foreground="White" Padding="10 0" VerticalAlignment="Center" FontSize="35" Text="{Binding CurrentCounty.Area}" Grid.Column="1" Grid.Row="2"/>
-        <TextBlock Foreground="White" Padding="10 0" VerticalAlignment="Center" FontSize="35" Text="{Binding CurrentCounty.Population}" Grid.Column="1" Grid.Row="3"/>
+        <Viewbox Grid.Row="1">
+            <TextBlock Foreground="{StaticResource MyWhite}" Text="{Binding CurrentCounty.Name}"/>
+        </Viewbox>
+        <Viewbox Grid.Row="3">
+            <TextBlock Foreground="{StaticResource MyWhite}" Text="{Binding CurrentCounty.Seat}"/>
+        </Viewbox>
+        <Viewbox Grid.Row="5">
+            <TextBlock Foreground="{StaticResource MyWhite}" Text="{Binding CurrentCounty.Area}"/>
+        </Viewbox>
+        <Viewbox Grid.Row="7">
+            <TextBlock Foreground="{StaticResource MyWhite}" Text="{Binding CurrentCounty.Population}"/>
+        </Viewbox>
     </Grid>
 </UserControl>

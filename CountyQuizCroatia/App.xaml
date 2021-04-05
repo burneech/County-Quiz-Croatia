@@ -9,23 +9,33 @@
                 <local:Bootstrapper/>
             </s:ApplicationLoader.Bootstrapper>
 
+            <!--COLORS-->
+            <SolidColorBrush x:Key="MyGray" Color="#686868"/>
+            <SolidColorBrush x:Key="MyDarkGray" Color="#1E1E1E"/>
+            <SolidColorBrush x:Key="MyMidGray" Color="#3E3E42"/>
+            <SolidColorBrush x:Key="MyLightGray" Color="#D3D3D3"/>
+            <SolidColorBrush x:Key="MyWhite" Color="#FFFFFFFF"/>
+            <SolidColorBrush x:Key="MyBlue" Color="#007ACC"/>
+            
+            <!--COUNTY (FIELD/PATH ON MAP) STYLE-->
             <Style x:Key="CountyFieldStyle" TargetType="Path">
-                <Setter Property="Fill" Value="#686868"/>
+                <Setter Property="Fill" Value="{StaticResource MyGray}"/>
                 <Setter Property="StrokeThickness" Value="2"/>
-                <Setter Property="Stroke" Value="#FFFFFFFF"/>
+                <Setter Property="Stroke" Value="{StaticResource MyWhite}"/>
                 <Setter Property="StrokeLineJoin" Value="Round"/>
                 <Setter Property="StrokeStartLineCap" Value="Round"/>
                 <Setter Property="StrokeEndLineCap" Value="Round"/>
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Fill" Value="#007ACC"/>
+                        <Setter Property="Fill" Value="{StaticResource MyBlue}"/>
                     </Trigger>
                 </Style.Triggers>
             </Style>
 
+            <!--BUTTON STYLE-->
             <Style x:Key="ButtonStyle" TargetType="Button">
-                <Setter Property="Background" Value="#686868"/>
-                <Setter Property="Foreground" Value="LightGray"/>
+                <Setter Property="Background" Value="{StaticResource MyGray}"/>
+                <Setter Property="Foreground" Value="{StaticResource MyLightGray}"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="FontSize" Value="17"/>
                 <Setter Property="Template">
@@ -39,8 +49,8 @@
                 </Setter>
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#007ACC"/>
-                        <Setter Property="Foreground" Value="#FFFFFFFF"/>
+                        <Setter Property="Background" Value="{StaticResource MyBlue}"/>
+                        <Setter Property="Foreground" Value="{StaticResource MyWhite}"/>
                     </Trigger>
                 </Style.Triggers>
             </Style>

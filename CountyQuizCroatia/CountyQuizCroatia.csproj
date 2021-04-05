@@ -1,13 +1,30 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\icon.ico</ApplicationIcon>
+    <AssemblyName>County Quiz Croatia</AssemblyName>
+    <Authors>Mateo Brnic</Authors>
+    <Description>A simple practice application for creating interactive maps using XAML in WPF.</Description>
+    <RepositoryUrl>https://github.com/burneech/CountyQuizCroatia</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/burneech/CountyQuizCroatia</PackageProjectUrl>
+    <Company>Mateo Brnic</Company>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Stylet" Version="1.3.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
