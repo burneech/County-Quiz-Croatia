@@ -13,20 +13,24 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
+        <!--NUMBER OF COUNTIES LEFT TO GUESS-->
         <TextBlock Grid.Row="0" Foreground="{StaticResource MyWhite}" FontSize="25">
             <Run Text="Left to guess: "/>
             <Run Text="{Binding LeftToGuess}"/>
         </TextBlock>
 
+        <!--NUMBER OF WRONG GUESSES-->
         <TextBlock Grid.Row="1" Foreground="{StaticResource MyWhite}" FontSize="25">
             <Run Text="Wrong guesses: "/>
             <Run Text="{Binding WrongGuesses}"/>
         </TextBlock>
 
+        <!--COUNTY TO GUESS-->
         <Viewbox Grid.Row="2" Margin="35">
             <TextBlock Text="{Binding CountyToGuess.Name}" Foreground="{StaticResource MyWhite}"/>
         </Viewbox>
         
+        <!--BUTTON FOR NEW QUIZ-->
         <Button Grid.Row="3" Content="START NEW QUIZ" Command="{s:Action ResetQuizCommand}" Style="{StaticResource ButtonStyle}"/>
     </Grid>
 </UserControl>

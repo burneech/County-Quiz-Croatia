@@ -16,6 +16,9 @@ namespace CountyQuizCroatia.Services
             ResetQuiz();
         }
 
+        /// <summary>
+        /// Creates a new randomized list of counties, effectively reseting the quiz
+        /// </summary>
         public void ResetQuiz()
         {
             CountiesListRandomized = _countyService.GetCountyList().OrderBy(x => Guid.NewGuid()).ToList();

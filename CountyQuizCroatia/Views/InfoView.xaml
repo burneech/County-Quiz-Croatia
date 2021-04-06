@@ -16,27 +16,35 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <!--COUNTY NAME-->
         <Viewbox Grid.Row="0" HorizontalAlignment="Left">
             <Label Foreground="{StaticResource MyGray}" Content="Name:"/>
         </Viewbox>
-        <Viewbox Grid.Row="2" HorizontalAlignment="Left">
-            <Label Foreground="{StaticResource MyGray}" Content="Seat:"/>
-        </Viewbox>
-        <Viewbox Grid.Row="4" HorizontalAlignment="Left">
-            <Label Foreground="{StaticResource MyGray}" Content="Area:"/>
-        </Viewbox>
-        <Viewbox Grid.Row="6" HorizontalAlignment="Left">
-            <Label Foreground="{StaticResource MyGray}" Content="Population:"/>
-        </Viewbox>
-
         <Viewbox Grid.Row="1">
             <TextBlock Foreground="{StaticResource MyWhite}" Text="{Binding CurrentCounty.Name}"/>
+        </Viewbox>
+        
+        <!--COUNTY SEAT-->
+        <Viewbox Grid.Row="2" HorizontalAlignment="Left">
+            <Label Foreground="{StaticResource MyGray}" Content="Seat:"/>
         </Viewbox>
         <Viewbox Grid.Row="3">
             <TextBlock Foreground="{StaticResource MyWhite}" Text="{Binding CurrentCounty.Seat}"/>
         </Viewbox>
+        
+        <!--COUNTY AREA-->
+        <Viewbox Grid.Row="4" HorizontalAlignment="Left">
+            <Label Foreground="{StaticResource MyGray}" Content="Area:"/>
+        </Viewbox>
         <Viewbox Grid.Row="5">
-            <TextBlock Foreground="{StaticResource MyWhite}" Text="{Binding CurrentCounty.Area}"/>
+            <TextBlock Foreground="{StaticResource MyWhite}">
+                <Run Text="{Binding CurrentCounty.Area}"/><Run Text=" km²"/>
+            </TextBlock>
+        </Viewbox>
+
+        <!--COUNTY POPULATION-->
+        <Viewbox Grid.Row="6" HorizontalAlignment="Left">
+            <Label Foreground="{StaticResource MyGray}" Content="Population:"/>
         </Viewbox>
         <Viewbox Grid.Row="7">
             <TextBlock Foreground="{StaticResource MyWhite}" Text="{Binding CurrentCounty.Population}"/>

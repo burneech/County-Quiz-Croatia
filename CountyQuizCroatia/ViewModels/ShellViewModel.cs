@@ -1,6 +1,5 @@
 ﻿using CountyQuizCroatia.Services;
 using System.Windows.Shapes;
-using System.Diagnostics;
 using Stylet;
 using System;
 

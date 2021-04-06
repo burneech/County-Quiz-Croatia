@@ -41,6 +41,9 @@ namespace CountyQuizCroatia.ViewModels
             ResetState();
         }
 
+        /// <summary>
+        /// Resets quiz progress / starts new quiz
+        /// </summary>
         public void ResetState()
         {
             _quizManager.ResetQuiz();
