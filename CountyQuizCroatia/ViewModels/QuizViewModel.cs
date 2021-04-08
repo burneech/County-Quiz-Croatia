@@ -38,7 +38,6 @@ namespace CountyQuizCroatia.ViewModels
         public QuizViewModel(IQuizManager quizManager)
         {
             _quizManager = quizManager;
-            ResetState();
         }
 
         /// <summary>
@@ -62,8 +61,8 @@ namespace CountyQuizCroatia.ViewModels
 
             if (countyClicked == CountyToGuess)
             {
-                CountyToGuess = _quizManager.GiveMeACountyToGuess();
                 LeftToGuess = _quizManager.NumOfCountiesLeftToGuess();
+                CountyToGuess = _quizManager.GiveMeACountyToGuess();
 
                 if (CountyToGuess == null)
                 {
