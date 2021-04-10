@@ -29,11 +29,19 @@
 
             <!--INFO MODE BUTTON-->
             <Button Content="INFO MODE" Margin="0 0 2 4" Grid.Column="0" Style="{StaticResource ButtonStyle}"
-                    Command="{s:Action ChangeGameModeCommand}" CommandParameter="{x:Static vm:ShellViewModel+GameMode.Info}"/>
+                    Command="{s:Action ChangeGameModeCommand}" CommandParameter="{x:Static vm:ShellViewModel+GameMode.Info}">
+                <Button.Background>
+                    <SolidColorBrush Color="{Binding InfoBtnBackground}" />
+                </Button.Background>
+            </Button>
 
             <!--QUIZ MODE BUTTON-->
             <Button Content="QUIZ MODE" Margin="2 0 0 4" Grid.Column="1" Style="{StaticResource ButtonStyle}"
-                    Command="{s:Action ChangeGameModeCommand}" CommandParameter="{x:Static vm:ShellViewModel+GameMode.Quiz}"/>
+                    Command="{s:Action ChangeGameModeCommand}" CommandParameter="{x:Static vm:ShellViewModel+GameMode.Quiz}">
+                <Button.Background>
+                    <SolidColorBrush Color="{Binding QuizBtnBackground}" />
+                </Button.Background>
+            </Button>
 
             <!--INFO/QUIZ MODE VIEW CONTENT CONTROL-->
             <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="{StaticResource MyMidGray}" BorderThickness="2" Padding="20">
