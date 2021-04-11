@@ -7,8 +7,8 @@ The application has two modes:
 
 Switching between modes resets them, to prevent cheating.
 
-<img src="https://i.imgur.com/BXmx442.jpg" alt="Info mode" width="75%" height="75%">
-<img src="https://i.imgur.com/fW6yeyE.jpg" alt="Quiz mode" width="75%" height="75%">
+<img src="https://i.imgur.com/2CAfJN4.png" alt="Info mode" width="75%" height="75%">
+<img src="https://i.imgur.com/UQI4OSe.png" alt="Quiz mode" width="75%" height="75%">
 
 ### Vector graphics to XAML
 The easiest way to get paths from a vector graphics image inside your XAML file (in this case a *UserControl*), is to use [Inkscape](https://inkscape.org/), because of its handy save option: *Save as Microsoft XAML*.
